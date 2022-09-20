@@ -4,6 +4,6 @@ for i in range(10):
         if (i == 0 and j == 1):
             pass
         else:
-                print(", ", end='')
+            print(", ", end='')
         print("{}{}".format(i, j), end='')
 print("")
