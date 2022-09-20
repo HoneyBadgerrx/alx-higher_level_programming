@@ -15,13 +15,16 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		if ((*head)->n <= number)
 		{
-			new = malloc(sizeof (listint_t));
-			if (new == NULL)
-				return (NULL);
-			new->n = number;
-			new->next = (*head)->next;
-			(*head)->next = new;
-			return (new);
+			if ((*head)->next == NULL || number <= (*head)->next->n)
+			{
+				new = malloc(sizeof (listint_t));
+				if (new == NULL)
+					return (NULL);
+				new->n = number;
+				new->next = (*head)->next;
+				(*head)->next = new;
+				return (new);
+			}
 		}
 		*head = (*head)->next;
 	}
