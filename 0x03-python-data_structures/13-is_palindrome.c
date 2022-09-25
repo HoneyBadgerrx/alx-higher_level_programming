@@ -6,11 +6,11 @@
  */
 int is_palindrome(listint_t **head)
 {
+	if (*head == NULL || p->next == NULL)
+		return (1);
+
 	listint_t *p = *head, *q = *head;
 	int count = 0, i, j;
-
-	if (head == NULL || *head == NULL)
-		return (1);
 
 	for (; q->next; count++)
 		q = q->next;
