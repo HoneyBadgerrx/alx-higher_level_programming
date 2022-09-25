@@ -6,7 +6,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || p->next == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
 	listint_t *p = *head, *q = *head;
