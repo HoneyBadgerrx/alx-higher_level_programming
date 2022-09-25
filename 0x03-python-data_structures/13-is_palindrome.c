@@ -14,14 +14,16 @@ int is_palindrome(listint_t **head)
 
 	for (; q->next; count++)
 		q = q->next;
-
-	for (i = 0; q->n == p->n; ++i)
+	for (i = 0;; ++i)
 	{
-		q = p;
+		q = *head;
 		for (j = 0; j < count - i; ++j)
 			q = q->next;
 		if (i > j || j == i)
 			return (1);
+		if (q->n != p->n)
+			break;
+		p = p->next;
 	}
 	return (0);
 }
