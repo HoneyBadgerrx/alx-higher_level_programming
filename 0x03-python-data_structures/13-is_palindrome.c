@@ -16,8 +16,8 @@ int is_palindrome(listint_t **head)
 		q = q->next;
 	for (i = 0;; ++i)
 	{
-		q = *head;
-		for (j = 0; j < count - i; ++j)
+		q = p;
+		for (j = 0; j < count - i * 2; ++j)
 			q = q->next;
 		if (i > j || j == i)
 			return (1);
