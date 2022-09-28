@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary:
+    if a_dictionary and len(a_dictionary):
         for k in a_dictionary:
             m = a_dictionary[k]
             break
@@ -8,5 +8,4 @@ def best_score(a_dictionary):
             if v > m:
                 m = v
         return m
-    else:
-        return None
+    return None
