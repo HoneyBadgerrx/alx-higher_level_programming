@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    sa = set(my_list)
-    return reduce(lambda x, y: x + y, list(sa))
+    s = set(my_list)
+    sum = 0
+    for i in s:
+        sum += i
+    return sum
