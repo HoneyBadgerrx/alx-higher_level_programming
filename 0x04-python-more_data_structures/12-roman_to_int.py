@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if roman_string or type(roman_string) == str:
+    if roman_string and type(roman_string) == str:
         s = 0
         rom = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'M': 1000, 'D': 500, 'C': 100}
         for i in range(roman_string):
