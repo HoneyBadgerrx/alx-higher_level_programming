@@ -6,5 +6,7 @@ def roman_to_int(roman_string):
         for i in roman_string:
             if rom.get(i, 0):
                 s += rom[i]
+            else:
+                return 0
         return s
-    return None
+    return 0
