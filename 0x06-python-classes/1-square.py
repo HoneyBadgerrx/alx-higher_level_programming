@@ -3,15 +3,16 @@
 
 
 class Square:
-    """square class format"""
+    """square class format
+
+        Attributes:
+            __size (int): size of sqaure
+    """
     def __init__(self, size):
-        """ init function"""
-        self.size = size
-    @property
-    def size(self):
-        """ returns value of size"""
-        return self.__size
-    @size.setter
-    def size(self, value):
-        """ sets value of size """
-        self.__size = value
+        """ init function
+        Args:
+            size (int): size of square
+        Returns:
+            None
+        """
+        self.__size = size
