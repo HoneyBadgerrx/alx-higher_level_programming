@@ -55,12 +55,10 @@ class Square:
         Returns:
             None
         """
-        l= self.__size
-        while l > 0:
-            b = self.__size
-            while b > 0:
+        l = self.__size
+        for i in range(0, self.__size):
+            for j in range(0, self.__size):
                 print("#", end="")
-                b -= 1
             print()
         if self.__size == 0:
             print()
