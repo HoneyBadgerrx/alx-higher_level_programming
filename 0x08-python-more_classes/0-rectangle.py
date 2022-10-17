@@ -7,4 +7,3 @@ module for rect class
 class Rectangle:
     """rectangle class"""
     pass
-
