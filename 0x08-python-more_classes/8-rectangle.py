@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """module containing rectangle class"""
+
+
 class Rectangle:
     """rectangle class"""
     number_of_instances = 0
@@ -20,6 +22,7 @@ class Rectangle:
     def width(self):
         """width getter"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """width setter"""
@@ -33,6 +36,7 @@ class Rectangle:
     def height(self):
         """height getter"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """sets height"""
@@ -45,11 +49,13 @@ class Rectangle:
     def area(self):
         """returns area"""
         return self.__width * self.__height
+
     def perimeter(self):
         """returns perimeter"""
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """returns biggest rect"""
@@ -71,6 +77,7 @@ class Rectangle:
             if (i != self.__height - 1):
                 string += '\n'
         return string
+
     def __repr__(self):
         """rept of class instace"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)

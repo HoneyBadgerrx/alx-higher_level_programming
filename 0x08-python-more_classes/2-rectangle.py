@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 """module containing rect class"""
+
+
 class Rectangle:
     """rect class"""
     def __init__(self, width=0, height=0):
         """initialisation"""
         self.width = width
         self.height = height
+
     @property
     def width(self):
         """width getter"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """width seter"""
@@ -18,10 +22,12 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
     @property
     def height(self):
         """heigth getter"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """height seter"""
@@ -34,6 +40,7 @@ class Rectangle:
     def area(self):
         """retuns area"""
         return width * height
+
     def perimeter(self):
         """return perimeter"""
         if height == 0 or width == 0:
