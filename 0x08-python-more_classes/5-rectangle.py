@@ -9,7 +9,7 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    def __del___(self):
+    def __del__(self):
         """on del method"""
         print("Bye rectangle...")
 
