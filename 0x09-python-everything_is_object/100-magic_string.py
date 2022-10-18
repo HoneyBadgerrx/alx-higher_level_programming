@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def magic_string(magic=[]):
-    magic += ["BestSchool"]
-    return (", ".join(magic))
+def kab():
+    kab.j = getattr(kab, 'j', 0) + 1
+    return str("BestSchool, " * (kab.j - 1) + "BestSchool")
