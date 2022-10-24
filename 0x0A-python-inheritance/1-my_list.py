@@ -8,4 +8,4 @@ class Mylist(list):
     """a class inheriting from list"""
     def print_sorted(self):
         """prints sorted list in ascending order"""
-        return sorted(self)
+        print(sorted(self))
