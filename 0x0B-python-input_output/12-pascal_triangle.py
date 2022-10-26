@@ -9,19 +9,19 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    l = []
-    l.append([1])
+    pascal = []
+    pascal.append([1])
     for i in range(n - 1):
         new_list = []
         new_list.append(1)
-        a, b = 0 , 1
+        a, b = 0, 1
         while True:
             try:
-                new_list.append(l[i][a] + l[i][b])
+                new_list.append(pascal[i][a] + pascal[i][b])
                 a += 1
                 b += 1
             except Exception:
                 break
         new_list.append(1)
-        l.append(new_list)
-    return l
+        pascal.append(new_list)
+    return pascal
