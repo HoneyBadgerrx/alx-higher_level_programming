@@ -28,28 +28,45 @@ class Rectangle(Base):
             print(" " * self.x, end="")
             print("#" * self.width)
 
-    def update(self, *args):
-        """updates values of objects"""
-        try:
-            self.id = args[0]
-        except IndexError:
-            pass
-        try:
-            self.width = args[1]
-        except IndexError:
-            pass
-        try:
-            self.height = args[2]
-        except IndexError:
-            pass
-        try:
-            self.x = args[3]
-        except IndexError:
-            pass
-        try:
-            self.y = args[4]
-        except IndexError:
-            pass
+    def to_dictionary(self):
+        """returns dict repr of object"""
+        return vars(self)
+
+    def update(self, *args, **kwargs):
+        """updates values of objects. If args is passed, kwargs is ignored"""
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+            except IndexError:
+                pass
+            try:
+                self.width = args[1]
+            except IndexError:
+                pass
+            try:
+                self.height = args[2]
+            except IndexError:
+                    pass
+            try:
+                self.x = args[3]
+            except IndexError:
+                pass
+            try:
+                self.y = args[4]
+            except IndexError:
+                pass
+        else:
+            for i in kwargs:
+                if i == "id":
+                    self.id = kwargs[i]
+                if i == "width":
+                    self.width = kwargs[i]
+                if i == "height":
+                    self.height = kwargs[i]
+                if i == "x":
+                    self.x = kwargs[i]
+                if i == "y":
+                    self.y = kwargs[i]
 
     @property
     def x(self):
@@ -105,9 +122,16 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns informal string repr of object"""
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.x, self.y,\
-                 self.width, self.height)
-k = Rectangle(5,5,5,0,5)
-print(vars(k))
-k.update(1,1,1)
-print(vars(k))
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, 
+                self.x, self.y, self.width, self.height)
+r1 = Rectangle(10, 7, 2, 8)
+
+r2 = Rectangle(2, 4)
+
+Rectangle.save_to_file([])
+
+
+
+with open("Rectangle.json", "r") as file:
+
+    print(file.read())
