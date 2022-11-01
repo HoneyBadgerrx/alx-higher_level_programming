@@ -4,8 +4,8 @@ module containing square class
 """
 
 
-Base = __import__("base").Base
-Rectangle = __import__("rectangle").Rectangle
+from models.base import Base
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
