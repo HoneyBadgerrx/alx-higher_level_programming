@@ -4,7 +4,6 @@ A module that test differents behaviors
 of the Square class
 """
 import unittest
-import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
