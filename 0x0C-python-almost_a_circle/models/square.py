@@ -32,5 +32,3 @@ class Square(Rectangle):
         """sets width and height"""
         self.width = size
         self.height = size
-a = Square(9,5,5,5)
-print(a.to_dictionary())

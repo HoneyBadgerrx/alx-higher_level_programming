@@ -124,14 +124,3 @@ class Rectangle(Base):
         """returns informal string repr of object"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, 
                 self.x, self.y, self.width, self.height)
-r1 = Rectangle(10, 7, 2, 8)
-
-r2 = Rectangle(2, 4)
-
-Rectangle.save_to_file([])
-
-
-
-with open("Rectangle.json", "r") as file:
-
-    print(file.read())
