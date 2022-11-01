@@ -46,7 +46,7 @@ class Rectangle(Base):
             try:
                 self.height = args[2]
             except IndexError:
-                    pass
+                pass
             try:
                 self.x = args[3]
             except IndexError:
@@ -72,6 +72,7 @@ class Rectangle(Base):
     def x(self):
         """return x"""
         return self.__x
+
     @x.setter
     def x(self, x):
         """sets x"""
@@ -85,6 +86,7 @@ class Rectangle(Base):
     def y(self):
         """return y"""
         return self.__y
+
     @y.setter
     def y(self, y):
         """sets y"""
@@ -98,6 +100,7 @@ class Rectangle(Base):
     def width(self):
         """return width"""
         return self.__width
+
     @width.setter
     def width(self, width):
         """sets width"""
@@ -111,6 +114,7 @@ class Rectangle(Base):
     def height(self):
         """returna height"""
         return self.__height
+
     @height.setter
     def height(self, height):
         """sets height"""
@@ -122,5 +126,5 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns informal string repr of object"""
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, 
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, \
                 self.x, self.y, self.width, self.height)
